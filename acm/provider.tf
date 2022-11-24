@@ -1,3 +1,3 @@
 provider "aws" {
-  region     = var.acm_region
+  region     = var.region
 }

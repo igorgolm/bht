@@ -3,11 +3,6 @@ variable "region" {
   description = "AWS Region"
 }
 
-variable "allowed_account_ids" {
-  type        = list
-  description = "Allowed AWS account IDs"
-}
-
 variable "aws_account" {
   type        = number
   description = "AWS Account ID"
