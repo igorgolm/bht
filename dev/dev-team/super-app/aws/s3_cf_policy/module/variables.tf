@@ -3,7 +3,17 @@ variable "aws_account" {
   description = "AWS Account ID"
 }
 
-variable "s3_bucket_id" {
+variable "cf_distribution_id" {
   type        = string
-  description = "S3 bucket id"
+  description = "CF distribution ID"
+}
+
+variable "s3_bucket_name" {
+  type        = string
+  description = "S3 bucket name"
+}
+
+variable "s3_bucket_arn" {
+  type        = string
+  description = "S3 bucket ARN"
 }

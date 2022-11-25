@@ -13,13 +13,12 @@ variable "s3_bucket_name" {
   description = "S3 bucket name"
 }
 
-variable "s3_bucket_acl" {
+variable "s3_bucket_arn" {
   type        = string
-  description = "S3 bucket acl"
+  description = "S3 bucket ARN"
 }
 
-variable "s3_bucket_versioning_enabled" {
+variable "cf_distribution_id" {
   type        = string
-  description = "S3 bucket versioning"
-  default     = "Enabled"
+  description = "CF distribution ID"
 }
