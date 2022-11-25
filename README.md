@@ -1,4 +1,4 @@
-# BHT app
+# BHT app https://super.wikdom.online/
 App is hosted on S3 bucket and served by CloudFormation. Direct access to bucket website is not allowed
 ### Overall architecture
 
@@ -18,4 +18,4 @@ State file are also in TF Cloud.
 For infrastructure provisioning you should have an access to TF Cloud to X organization and to AWS Account.
 Some variables, such as region, AWS Access key ID and Secret Access key, are added to TF Cloud Workspace variables.
 
-TF Cloud triggers Plan and Apply for every repo commit.
+TF Cloud triggers Plan and Apply for changes in TF files.

@@ -3,6 +3,16 @@ variable "region" {
   description = "AWS Region"
 }
 
+variable "target_bucket_name" {
+  type        = string
+  description = "S3 bucket name for CF origin"
+}
+
+variable "s3_domain_name" {
+  type        = string
+  description = "Target S3 bucket domain name"
+}
+
 variable "cloudfront_aliases" {
   type        = list
   description = "Aliases/CNAMEs for CF origin"

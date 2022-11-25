@@ -1,8 +1,3 @@
-variable "aws_account" {
-  type        = number
-  description = "AWS Account ID"
-}
-
 variable "target_bucket_name" {
   type        = string
   description = "S3 bucket name for CF origin"
