@@ -9,8 +9,4 @@ module "zones" {
       }
     }
   }
-
-  tags = {
-    ManagedBy = "TerraformCloud"
-  }
 }

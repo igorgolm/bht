@@ -10,8 +10,4 @@ module "acm" {
   ]
 
   wait_for_validation = true
-
-  tags = {
-    ManagedBy = "TerraformCloud"
-  }
 }
