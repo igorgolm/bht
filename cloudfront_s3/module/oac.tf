@@ -1,4 +1,3 @@
-
 resource "aws_cloudfront_origin_access_control" "oac" {
   name                              = "cloudfront_oac"
   description                       = "OAC for CloudFront"
