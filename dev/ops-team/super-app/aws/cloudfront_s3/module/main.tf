@@ -6,11 +6,11 @@ resource "aws_cloudfront_distribution" "s3_bucket" {
   default_cache_behavior {
     allowed_methods        = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods         = ["GET", "HEAD"]
-    target_origin_id       = aws_s3_bucket.s3_bucket.bucket
+    target_origin_id       = var.target_bucket_name
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
 
-    min_ttl     = 5400
+    min_ttl     = 3200
     default_ttl = 5400
     max_ttl     = 7200
 
@@ -24,8 +24,8 @@ resource "aws_cloudfront_distribution" "s3_bucket" {
   }
 
   origin {
-    domain_name = aws_s3_bucket.s3_bucket.bucket_regional_domain_name
-    origin_id   = aws_s3_bucket.s3_bucket.bucket
+    domain_name = var.s3_domain_name
+    origin_id   = var.target_bucket_name
     origin_access_control_id  = aws_cloudfront_origin_access_control.oac.id
   }
 
@@ -41,8 +41,7 @@ resource "aws_cloudfront_distribution" "s3_bucket" {
   }
 
 depends_on = [
-  aws_cloudfront_origin_access_control.oac,
-  aws_s3_bucket.s3_bucket
+  aws_cloudfront_origin_access_control.oac
 ]
 
 }

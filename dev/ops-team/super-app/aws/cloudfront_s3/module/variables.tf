@@ -3,20 +3,14 @@ variable "aws_account" {
   description = "AWS Account ID"
 }
 
-variable "s3_bucket_name" {
+variable "target_bucket_name" {
   type        = string
-  description = "S3 bucket name"
+  description = "S3 bucket name for CF origin"
 }
 
-variable "s3_bucket_acl" {
+variable "s3_domain_name" {
   type        = string
-  description = "S3 bucket acl"
-}
-
-variable "s3_bucket_versioning_enabled" {
-  type        = string
-  description = "S3 bucket versioning"
-  default     = "Enabled"
+  description = "Target S3 bucket domain name"
 }
 
 variable "cloudfront_aliases" {
